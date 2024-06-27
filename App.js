@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+
+import Navigation from "./src/navigation/stackNavigation";
+import { StatusBar } from "expo-status-bar";
+import Welcome from "./src/pages/Welcome";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Team Fitness Tracker</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <Welcome />
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
