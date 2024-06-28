@@ -5,16 +5,16 @@ import CustomButton from "../components/CustomButton";
 import Loader from "../components/Loader";
 import { containerStyle } from "../styles";
 
-const WelcomeImage = require("../../assets/img/welcome.jpg");
+const WelcomeImage = require("../../assets/img/home_screen.jpeg");
 
 const Welcome = () => {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <>
-      {isLoading === false ? (
+      {isLoading === true ? (
         <ImageBackground
           source={WelcomeImage}
-          style={[containerStyle.container, {}]}>
+          style={[containerStyle.container, {height:"100%",width:"100%"}]}>
           <View
             style={{
               flex: 4,
@@ -24,29 +24,40 @@ const Welcome = () => {
             <Text
               style={{
                 fontSize: 40,
+                fontStyle: "italic",
                 fontWeight: "bold",
                 color: "black",
-                backgroundColor: "yellow",
+                backgroundColor: "#f5970a",
+            
                 paddingHorizontal: 10,
+                borderRadius:12,
+                margin:7,
               }}>
-              CURRENCY
+              FITNESS
             </Text>
+            <View style = {{borderWidth : 5 , borderColor : "#a8a6a5" , width :200 ,display :"flex " , justifyContent : "center" , alignItems : "center" ,borderRadius: 12}}>
             <Text
               style={{
-                fontSize: 25,
+                textAlign : "center",
+                fontSize: 35,
+                fontStyle: "italic",
                 fontWeight: "bold",
-                color: "#fff",
-                borderColor: "yellow",
-                borderWidth: 2,
-                padding: 12,
-                width: 233,
+                color: "#f2f5f3",
+                borderStyle:"solid",
+                borderColor: "#424040",
+                borderWidth: 5,
+                padding: 4,
+                width: 180,
+                margin : 4 ,
+                borderRadius: 12,
               }}>
-              CONVERTER
+              TRACKER
             </Text>
+            </View>
           </View>
 
           <View style={{ flex: 1, justifyContent: "center" }}>
-            <CustomButton title={"Get Started"}></CustomButton>
+            <CustomButton title={"Start Your New Journey"}></CustomButton>
           </View>
         </ImageBackground>
       ) : (
