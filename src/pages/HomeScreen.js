@@ -20,13 +20,16 @@ const HomeScreen = () => {
     workout,
   } = useContext(FitnessItems);
   return (
-    <ScrollView style={{ marginTop: 40 }}>
+    <ScrollView style={{ marginTop: 85,marginLeft:10, marginRight:10}}>
       <View
         style={{
-          backgroundColor: "#CD853F",
-          padding: 10,
-          height: 200,
+          backgroundColor: "#65bebf",
+          padding: 15,
+         
+          height: 150,
           width: "100%",
+          borderRadius:15,
+
         }}>
         <Text style={{ color: "white", fontWeight: "bold", fontSize: 18 }}>
           HOME WORKOUT
@@ -49,7 +52,7 @@ const HomeScreen = () => {
               }}>
               {workout}
             </Text>
-            <Text style={{ color: "#D0D0D0", fontSize: 17, marginTop: 6 }}>
+            <Text style={{ color: "#2b2b2b", fontSize: 17, marginTop: 6 }}>
               WORKOUTS
             </Text>
           </View>
@@ -64,7 +67,7 @@ const HomeScreen = () => {
               }}>
               {calories}
             </Text>
-            <Text style={{ color: "#D0D0D0", fontSize: 17, marginTop: 6 }}>
+            <Text style={{ color: "#2b2b2b", fontSize: 17, marginTop: 6 }}>
               KCAL
             </Text>
           </View>
@@ -79,25 +82,14 @@ const HomeScreen = () => {
               }}>
               {minutes}
             </Text>
-            <Text style={{ color: "#D0D0D0", fontSize: 17, marginTop: 6 }}>
+            <Text style={{ color: "#2b2b2b", fontSize: 17, marginTop: 6,fontWeight:"bold" }}>
               MINS
             </Text>
           </View>
         </View>
 
-        <View style={{ justifyContent: "center", alignItems: "center" }}>
-          <Image
-            style={{
-              width: "90%",
-              height: 120,
-              marginTop: 20,
-              borderRadius: 7,
-            }}
-            source={{
-              uri: "https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_842,ar_1.2,q_auto:eco,dpr_2,f_auto,fl_progressive/image/test/sku-card-widget/gold2.png",
-            }}
-          />
-        </View>
+        
+          
         <FitnessCards />
       </View>
     </ScrollView>
