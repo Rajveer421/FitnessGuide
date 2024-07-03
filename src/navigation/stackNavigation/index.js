@@ -1,26 +1,44 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import FitScreen from "../../pages/FitScreen";
+import HomeScreen from "../../pages/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import Welcome from "../../pages/Welcome";
-import { createStackNavigator } from "@react-navigation/stack";
+import RestScreen from "../../pages/RestScreen";
+import WorkOutScreen from "../../pages/WorkoutScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Navigation = () => {
-  const Stack = createStackNavigator();
+const StackNavigator = () => {
+  const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        initialRouteName={"Welcome"}>
-        <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Workout"
+          component={WorkOutScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Fit"
+          component={FitScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Rest"
+          component={RestScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-export default Navigation;
+export default StackNavigator;
 
 const styles = StyleSheet.create({});

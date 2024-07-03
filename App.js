@@ -1,22 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import Navigation from "./src/navigation/stackNavigation";
-import { StatusBar } from "expo-status-bar";
-import Welcome from "./src/pages/Welcome";
+import { FitnessContext } from "./src/navigation/Context";
+import StackNavigator from "./src/navigation/stackNavigation";
 
 export default function App() {
   return (
-    <>
-      <Welcome />
-    </>
+    <FitnessContext>
+      <StackNavigator />
+    </FitnessContext>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
