@@ -60,7 +60,7 @@ const Welcome = ({ navigation }) => {
                   margin: 4,
                   borderRadius: 12,
                 }}>
-                TRACKER
+                GUIDE
               </Text>
             </View>
           </View>
