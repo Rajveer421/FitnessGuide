@@ -7,14 +7,14 @@ import { containerStyle } from "../styles";
 
 const WelcomeImage = require("../../assets/img/home_screen.jpeg");
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <>
       {isLoading === true ? (
         <ImageBackground
           source={WelcomeImage}
-          style={[containerStyle.container, {height:"100%",width:"100%"}]}>
+          style={[containerStyle.container, { height: "100%", width: "100%" }]}>
           <View
             style={{
               flex: 4,
@@ -28,36 +28,47 @@ const Welcome = () => {
                 fontWeight: "bold",
                 color: "black",
                 backgroundColor: "#f5970a",
-            
+
                 paddingHorizontal: 10,
-                borderRadius:12,
-                margin:7,
+                borderRadius: 12,
+                margin: 7,
               }}>
               FITNESS
             </Text>
-            <View style = {{borderWidth : 5 , borderColor : "#a8a6a5" , width :200 ,display :"flex " , justifyContent : "center" , alignItems : "center" ,borderRadius: 12}}>
-            <Text
+            <View
               style={{
-                textAlign : "center",
-                fontSize: 35,
-                fontStyle: "italic",
-                fontWeight: "bold",
-                color: "#f2f5f3",
-                borderStyle:"solid",
-                borderColor: "#424040",
                 borderWidth: 5,
-                padding: 4,
-                width: 180,
-                margin : 4 ,
+                borderColor: "#a8a6a5",
+                width: 200,
+                display: "flex ",
+                justifyContent: "center",
+                alignItems: "center",
                 borderRadius: 12,
               }}>
-              TRACKER
-            </Text>
+              <Text
+                style={{
+                  textAlign: "center",
+                  fontSize: 35,
+                  fontStyle: "italic",
+                  fontWeight: "bold",
+                  color: "#f2f5f3",
+                  borderStyle: "solid",
+                  borderColor: "#424040",
+                  borderWidth: 5,
+                  padding: 4,
+                  width: 180,
+                  margin: 4,
+                  borderRadius: 12,
+                }}>
+                TRACKER
+              </Text>
             </View>
           </View>
 
           <View style={{ flex: 1, justifyContent: "center" }}>
-            <CustomButton title={"Start Your New Journey"}></CustomButton>
+            <CustomButton
+              navigation={navigation}
+              title={"Start Your New Journey"}></CustomButton>
           </View>
         </ImageBackground>
       ) : (

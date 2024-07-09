@@ -5,6 +5,7 @@ import HomeScreen from "../../pages/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import RestScreen from "../../pages/RestScreen";
+import Welcome from "../../pages/Welcome";
 import WorkOutScreen from "../../pages/WorkoutScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -13,7 +14,12 @@ const StackNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="Home"
           component={HomeScreen}
