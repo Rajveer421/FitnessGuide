@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
-import React, { useState, useEffect } from "react";
+import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useState } from "react";
+
 import { useNavigation } from "@react-navigation/native";
 
 const RestScreen = () => {
   const navigation = useNavigation();
   let timer = 0;
-  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeLeft, setTimeLeft] = useState(0);
 
   const startTime = () => {
     setTimeout(() => {
@@ -37,8 +38,7 @@ const RestScreen = () => {
           fontWeight: "900",
           marginTop: 50,
           textAlign: "center",
-        }}
-      >
+        }}>
         TAKE A BREAK!
       </Text>
 
@@ -48,8 +48,7 @@ const RestScreen = () => {
           fontWeight: "800",
           marginTop: 50,
           textAlign: "center",
-        }}
-      >
+        }}>
         {timeLeft}
       </Text>
     </SafeAreaView>

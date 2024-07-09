@@ -20,76 +20,116 @@ const HomeScreen = () => {
     workout,
   } = useContext(FitnessItems);
   return (
-    <ScrollView style={{ marginTop: 85,marginLeft:10, marginRight:10}}>
+    <ScrollView style={{ marginTop: 85, marginLeft: 10, marginRight: 10 }}>
       <View
         style={{
-          backgroundColor: "#65bebf",
           padding: 15,
-         
-          height: 150,
           width: "100%",
-          borderRadius:15,
-
+          height: "100%",
+          borderRadius: 15,
         }}>
         <Text style={{ color: "white", fontWeight: "bold", fontSize: 18 }}>
           HOME WORKOUT
         </Text>
-
         <View
           style={{
             flexDirection: "row",
+            backgroundColor: "#65bebf",
             alignItems: "center",
             justifyContent: "space-between",
             marginTop: 20,
+            height: 150,
+            width: "100%",
+            borderRadius: 20,
+            padding: 40,
           }}>
-          <View>
-            <Text
-              style={{
-                textAlign: "center",
-                fontWeight: "bold",
-                color: "white",
-                fontSize: 18,
-              }}>
-              {workout}
-            </Text>
-            <Text style={{ color: "#2b2b2b", fontSize: 17, marginTop: 6 }}>
-              WORKOUTS
-            </Text>
-          </View>
+          {minutes || calories || workout ? (
+            <>
+              <View>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    color: "white",
+                    fontSize: 18,
+                  }}>
+                  {workout}
+                </Text>
+                <Text
+                  style={{
+                    color: "#2b2b2b",
+                    fontSize: 17,
+                    marginTop: 6,
+                    fontWeight: "bold",
+                  }}>
+                  WORKOUTS
+                </Text>
+              </View>
 
-          <View>
-            <Text
-              style={{
-                textAlign: "center",
-                fontWeight: "bold",
-                color: "white",
-                fontSize: 18,
-              }}>
-              {calories}
-            </Text>
-            <Text style={{ color: "#2b2b2b", fontSize: 17, marginTop: 6 }}>
-              KCAL
-            </Text>
-          </View>
+              <View>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    color: "white",
+                    fontSize: 18,
+                  }}>
+                  {calories}
+                </Text>
+                <Text
+                  style={{
+                    color: "#2b2b2b",
+                    fontSize: 17,
+                    marginTop: 6,
+                    fontWeight: "bold",
+                  }}>
+                  KCAL
+                </Text>
+              </View>
 
-          <View>
-            <Text
+              <View>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    color: "white",
+                    fontSize: 18,
+                  }}>
+                  {minutes}
+                </Text>
+                <Text
+                  style={{
+                    color: "#2b2b2b",
+                    fontSize: 17,
+                    marginTop: 6,
+                    fontWeight: "bold",
+                  }}>
+                  MINS
+                </Text>
+              </View>
+            </>
+          ) : (
+            <View
               style={{
-                textAlign: "center",
-                fontWeight: "bold",
-                color: "white",
-                fontSize: 18,
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+                width: "100%",
               }}>
-              {minutes}
-            </Text>
-            <Text style={{ color: "#2b2b2b", fontSize: 17, marginTop: 6,fontWeight:"bold" }}>
-              MINS
-            </Text>
-          </View>
+              <Text
+                style={{
+                  width: 500,
+                  color: "#2b2b2b",
+                  fontSize: 17,
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}>
+                👍Good Luck! Start your workout
+              </Text>
+            </View>
+          )}
         </View>
 
-        
-          
         <FitnessCards />
       </View>
     </ScrollView>
