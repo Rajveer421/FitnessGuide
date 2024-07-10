@@ -6,7 +6,7 @@ const CustomButton = ({ title, navigation }) => {
   return (
     <View>
       <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("SideNav")}
         style={{
           width: 250,
           height: 50,

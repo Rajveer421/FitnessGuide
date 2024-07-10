@@ -5,6 +5,7 @@ import HomeScreen from "../../pages/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import RestScreen from "../../pages/RestScreen";
+import SideNavigation from "../sideNavigation";
 import Welcome from "../../pages/Welcome";
 import WorkOutScreen from "../../pages/WorkoutScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -21,10 +22,11 @@ const StackNavigator = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Home"
-          component={HomeScreen}
+          name="SideNav"
+          component={SideNavigation}
           options={{ headerShown: false }}
         />
+
         <Stack.Screen
           name="Workout"
           component={WorkOutScreen}

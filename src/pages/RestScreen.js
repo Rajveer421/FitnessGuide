@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const RestScreen = () => {
   const navigation = useNavigation();
   let timer = 0;
-  const [timeLeft, setTimeLeft] = useState(5);
+  const [timeLeft, setTimeLeft] = useState(1);
 
   const startTime = () => {
     setTimeout(() => {

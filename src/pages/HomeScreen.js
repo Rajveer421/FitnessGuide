@@ -19,8 +19,10 @@ const HomeScreen = () => {
 
     workout,
   } = useContext(FitnessItems);
+
+  console.log("calories");
   return (
-    <ScrollView style={{ marginTop: 85, marginLeft: 10, marginRight: 10 }}>
+    <ScrollView style={{ marginTop: 15, marginLeft: 10, marginRight: 10 }}>
       <View
         style={{
           padding: 15,
@@ -74,7 +76,7 @@ const HomeScreen = () => {
                     color: "white",
                     fontSize: 18,
                   }}>
-                  {calories}
+                  {Number(calories.toFixed(2))}
                 </Text>
                 <Text
                   style={{
