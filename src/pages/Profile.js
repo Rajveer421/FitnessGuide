@@ -1,15 +1,14 @@
 import * as ImagePicker from "expo-image-picker";
 
 import { Avatar, Button } from "react-native-paper";
+import React, { useEffect, useState } from "react";
 import {
-  Linking,
   SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
-import React, { useEffect, useState } from "react";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { COLORS } from "../constants/Colors";

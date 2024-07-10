@@ -24,7 +24,7 @@ export default [
         id: "12",
         image:
           "https://media.self.com/photos/583c641ca8746f6e65a60c7e/master/w_1600%2Cc_limit/DIAMOND_PUSHUP_MOTIFIED.gif",
-        name: "INCLINED PUSH-UPS",
+        name: "DIAMOND PUSH-UPS",
         sets: 10,
       },
       {
@@ -110,7 +110,8 @@ export default [
       },
       {
         id: "71",
-        image: "https://www.sparkpeople.com/assets/exercises/Triceps-Dips-with-Straight-Legs.gif",
+        image:
+          "https://www.sparkpeople.com/assets/exercises/Triceps-Dips-with-Straight-Legs.gif",
         name: "TRICEP DIPS",
         sets: 10,
       },
@@ -179,8 +180,7 @@ export default [
       },
       {
         id: "23",
-        image:
-          "https://cdn.jefit.com/assets/img/exercises/gifs/625.gif",
+        image: "https://cdn.jefit.com/assets/img/exercises/gifs/625.gif",
         name: "COBRA STRETCH",
         sets: 4,
       },
