@@ -28,7 +28,7 @@ const HomeScreen = () => {
           height: "100%",
           borderRadius: 15,
         }}>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: 18 }}>
+        <Text style={{ color: "black", fontWeight: "bold", fontSize: 18 }}>
           HOME WORKOUT
         </Text>
         <View

@@ -110,14 +110,14 @@ export default [
       },
       {
         id: "71",
-        image: "https://thumbs.gfycat.com/CompleteZigzagFossa-max-1mb.gif",
+        image: "https://www.sparkpeople.com/assets/exercises/Triceps-Dips-with-Straight-Legs.gif",
         name: "TRICEP DIPS",
         sets: 10,
       },
       {
         id: "72",
         image:
-          "https://thumbs.gfycat.com/MisguidedAridAlaskanmalamute-max-1mb.gif",
+          "https://www.lifetime60day.com/wp-content/uploads/2017/11/Diamond-Push-Up.gif",
         name: "DIAMOND_PUSHUP",
         sets: 10,
       },
@@ -173,14 +173,14 @@ export default [
       },
       {
         id: "22",
-        image: "https://thumbs.gfycat.com/TheseRigidBorer-size_restricted.gif",
+        image: "https://cdn.jefit.com/assets/img/exercises/gifs/882.gif",
         name: "SHOULDER STRETCH",
         sets: 5,
       },
       {
         id: "23",
         image:
-          "https://thumbs.gfycat.com/AlertAfraidAldabratortoise-max-1mb.gif",
+          "https://cdn.jefit.com/assets/img/exercises/gifs/625.gif",
         name: "COBRA STRETCH",
         sets: 4,
       },
