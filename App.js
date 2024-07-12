@@ -1,20 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler";
+
+import { FitnessContext } from "./src/navigation/Context";
+import StackNavigator from "./src/navigation/stackNavigation";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Team Fitness Tracker</Text>
-      <StatusBar style="auto" />
-    </View>
+    <FitnessContext>
+      <StackNavigator />
+    </FitnessContext>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
