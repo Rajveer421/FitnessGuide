@@ -79,7 +79,7 @@ const Profile = ({ navigation }) => {
         <View style={{ marginTop: 20, alignItems: "center" }}>
           <Text>Teams Email ID's </Text>
           <Text style={{ color: "blue" }}>rajveersingh57594@gmail.com</Text>
-          <Text style={{ color: "blue" }}>dummy@gmail.com</Text>
+          <Text style={{ color: "blue" }}>Mrbhardwaj8283@gmail.com</Text>
         </View>
         <View style={{ marginTop: 20, alignItems: "center" }}>
           <Text>Cordinator Sir Email ID </Text>
